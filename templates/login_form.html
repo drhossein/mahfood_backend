@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/font-awesome.css">
+    <style type="text/css">
+        body{
+            background: #ffffff url(https://www.bing.com/az/hprichbg/rb/Idukki_ROW13494136163_1920x1080.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        #main_content{
+            background: #ffffff;
+            margin-top: 20%;
+            border-radius: 20px;
+            height: 400px;
+            width: 100%;
+            opacity: .5;
+            transition: all .2s ease-out;
+            font-family: samim;
+        }
+        #main_content:hover{
+            opacity: 1;
+        }
+        @font-face {
+            font-family: 'samim';
+            src: url('/static/fonts/Samim.eot');
+            src: url('/static/fonts/Samim.woff') format('woff'), url('/static/fonts/Samim.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <div id="main_content">
+                        <div class="row">
+                            <div class="col-12 col-xl-6" style="padding: 25px;">
+                                <div class="card bg-light">
+                                    <div class="card-header">
+                                        <h3 class="card-title">
+                                            سامانه سفارش غذای مهسان
+                                        </h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="input-group">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-user-o"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="input-group" style="margin-top: 15px;">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-key"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                            <button style="margin-top: 15px;" class="btn btn-success btn-block">Login</button>
+                                        </form>
+                                        <div class="row" style="margin-top: 25px;">
+                                            <div class="col-12">
+                                                <button class="btn  btn-info">Forgot password</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="row">
+                                    <div class="col-12" style="padding: 25px !important;">
+                                        <button class="btn btn-primary btn-block">
+                                            <i class="fa fa-facebook fa-3x"></i> facebook
+                                        </button>
+                                        <button class="btn btn-danger btn-block" style="margin-top: 30px;">
+                                            <i class="fa fa-google-plus fa-3x"></i> Google+
+                                        </button>
+                                        <button class="btn btn-info btn-block" style="margin-top: 30px;">
+                                            <i class="fa fa-twitter fa-3x"></i> Twitter
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

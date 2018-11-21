@@ -11,7 +11,7 @@ class Food(models.Model):
     picture = models.FileField(blank=True, null=True, upload_to="static/food_pics/")
 
     def image_tag(self):
-        return ("<img src='/%s' style='max-width:250px; "
+        return mark_safe("<img src='/%s' style='max-width:250px; "
                          "height=auto'/>" % self.picture)
 
     def __str__(self):
