@@ -1,10 +1,12 @@
+import datetime
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from main.models import Food
+from main.models import Food, Reserve
 
 
 def login_(request):
@@ -42,3 +44,17 @@ def index(request):
     return render(request, 'order.html', {
         "foods": golabi
     })
+
+
+@login_required(login_url="/login")
+def reserve_food(request, food_type="lunch", food_id=None):
+    food = Food.objects.get(id=food_id)
+    try:
+        reserve_obj = Reserve()
+        reserve_obj.food = food
+        reserve_obj.user = request.user
+        reserve_obj.reserve_date = datetime.datetime.now()
+        reserve_obj.save()
+        return HttpResponse("success")
+    except Exception as exp:
+        return HttpResponse("error")

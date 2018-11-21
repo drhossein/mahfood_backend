@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
     path('login/', views.login_),
-    path('logout/', views.logout_)
+    path('logout/', views.logout_),
+    path('reserve/<str:food_type>/<int:food_id>/', views.reserve_food, name="reserve")
 ] + static(settings.STATIC_URL, document_root=settings.SITE_ROOT)

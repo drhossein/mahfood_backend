@@ -126,49 +126,51 @@
                     <div class="col-12">
                         <div class="card-deck">
                             {% for food in foods %}
-                            <div class="card">
-                                <img class="card-img-top" src="/{{ food.picture }}" alt="غذای خوب">
-                                <div class="card-body text-right rtl-text">
-                                    <h5 class="card-title">{{ food.name }}</h5>
-                                    <p class="card-text small">
-                                        {{ food.description }}
-                                    </p>
+                                <div class="card">
+                                    <img class="card-img-top" src="/{{ food.picture }}" alt="غذای خوب">
+                                    <div class="card-body text-right rtl-text">
+                                        <h5 class="card-title">{{ food.name }}</h5>
+                                        <p class="card-text small">
+                                            {{ food.description }}
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">
+                                            <a href="{% url "reserve" "lunch" food.id %}">
+                                                <button class="btn">انتخاب</button>
+                                            </a>
+                                        </small>
+                                    </div>
                                 </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">
-                                        <button class="btn">انتخاب</button>
-                                    </small>
-                                </div>
-                            </div>
                             {% endfor %}
-{#                            <div class="card">#}
-{#                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">#}
-{#                                <div class="card-body text-right rtl-text">#}
-{#                                    <h5 class="card-title">چلوکباب کوبیده</h5>#}
-{#                                    <p class="card-text small">#}
-{#                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج#}
-{#                                    </p>#}
-{#                                </div>#}
-{#                                <div class="card-footer">#}
-{#                                    <small class="text-muted">#}
-{#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
-{#                                    </small>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="card">#}
-{#                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">#}
-{#                                <div class="card-body text-right rtl-text">#}
-{#                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>#}
-{#                                    <p class="card-text small">#}
-{#                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج#}
-{#                                    </p>#}
-{#                                </div>#}
-{#                                <div class="card-footer">#}
-{#                                    <small class="text-muted">#}
-{#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
-{#                                    </small>#}
-{#                                </div>#}
-{#                            </div>#}
+                            {#                            <div class="card">#}
+                            {#                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">#}
+                            {#                                <div class="card-body text-right rtl-text">#}
+                            {#                                    <h5 class="card-title">چلوکباب کوبیده</h5>#}
+                            {#                                    <p class="card-text small">#}
+                            {#                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج#}
+                            {#                                    </p>#}
+                            {#                                </div>#}
+                            {#                                <div class="card-footer">#}
+                            {#                                    <small class="text-muted">#}
+                            {#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
+                            {#                                    </small>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                            {#                            <div class="card">#}
+                            {#                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">#}
+                            {#                                <div class="card-body text-right rtl-text">#}
+                            {#                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>#}
+                            {#                                    <p class="card-text small">#}
+                            {#                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج#}
+                            {#                                    </p>#}
+                            {#                                </div>#}
+                            {#                                <div class="card-footer">#}
+                            {#                                    <small class="text-muted">#}
+                            {#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
+                            {#                                    </small>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
                         </div>
                     </div>
                 </div>
