@@ -116,6 +116,8 @@ USE_L10N = True
 USE_TZ = True
 
 
+BACKEND_REPO = "https://github.com/drhossein/mahfood_backend.git"
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))

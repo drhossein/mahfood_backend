@@ -14,6 +14,9 @@ class Food(models.Model):
         return ("<img src='/%s' style='max-width:250px; "
                          "height=auto'/>" % self.picture)
 
+    def __str__(self):
+        return self.name
+
 
 class Reserve(models.Model):
     TYPE_CHOICE = (
@@ -22,7 +25,7 @@ class Reserve(models.Model):
     )
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     food = models.ForeignKey('main.Food',on_delete=models.CASCADE)
-    reserve_date = models.DateField(auto_now_add=True)
+    reserve_date = models.DateField()
     type = models.IntegerField(choices=TYPE_CHOICE,default=1)
 
 
