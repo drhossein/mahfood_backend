@@ -125,48 +125,50 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-deck">
-                            <div class="card border-success">
-                                <img class="card-img-top" src="/static/images/5a94edc3c292d.jpg" alt="غذای خوب">
-                                <div class="card-body text-success text-right rtl-text">
-                                    <h5 class="card-title">باقالی‌پلو با مرغ</h5>
-                                    <p class="card-text small">
-                                        گوشت ران مرغ تازه به همراه ۲۵۰ گرم باقالی‌پلو
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">
-                                        <button class="btn btn-success">انتخاب</button>
-                                    </small>
-                                </div>
-                            </div>
+                            {% for food in foods %}
                             <div class="card">
-                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">
+                                <img class="card-img-top" src="/{{ food.picture }}" alt="غذای خوب">
                                 <div class="card-body text-right rtl-text">
-                                    <h5 class="card-title">چلوکباب کوبیده</h5>
+                                    <h5 class="card-title">{{ food.name }}</h5>
                                     <p class="card-text small">
-                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج
+                                        {{ food.description }}
                                     </p>
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">
-                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                        <button class="btn">انتخاب</button>
                                     </small>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">
-                                <div class="card-body text-right rtl-text">
-                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>
-                                    <p class="card-text small">
-                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">
-                                        <button class="btn btn-outline-dark">انتخاب</button>
-                                    </small>
-                                </div>
-                            </div>
+                            {% endfor %}
+{#                            <div class="card">#}
+{#                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">#}
+{#                                <div class="card-body text-right rtl-text">#}
+{#                                    <h5 class="card-title">چلوکباب کوبیده</h5>#}
+{#                                    <p class="card-text small">#}
+{#                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج#}
+{#                                    </p>#}
+{#                                </div>#}
+{#                                <div class="card-footer">#}
+{#                                    <small class="text-muted">#}
+{#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
+{#                                    </small>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="card">#}
+{#                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">#}
+{#                                <div class="card-body text-right rtl-text">#}
+{#                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>#}
+{#                                    <p class="card-text small">#}
+{#                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج#}
+{#                                    </p>#}
+{#                                </div>#}
+{#                                <div class="card-footer">#}
+{#                                    <small class="text-muted">#}
+{#                                        <button class="btn btn-outline-dark">انتخاب</button>#}
+{#                                    </small>#}
+{#                                </div>#}
+{#                            </div>#}
                         </div>
                     </div>
                 </div>

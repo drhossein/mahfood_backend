@@ -22,5 +22,6 @@ from mahsanfood import settings
 urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
-    path('login/', views.login_)
+    path('login/', views.login_),
+    path('logout/', views.logout_)
 ] + static(settings.STATIC_URL, document_root=settings.SITE_ROOT)
