@@ -35,6 +35,11 @@
 
 <body>
 <div class="container-fluid">
+    {% if error %}
+    <div  class="alert-danger">
+        Username or Password is invalid.
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
@@ -50,7 +55,7 @@
                                         </h3>
                                     </div>
                                     <div class="card-body">
-                                        <form action="." method="post">
+                                        <form action="." method="post">{% csrf_token %}
                                             <div class="input-group">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text">

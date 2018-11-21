@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="utf-8">
+    <title>Order</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/font-awesome.css">
+    <style type="text/css">
+        body{
+            background: #ffffff url(https://www.bing.com/az/hprichbg/rb/Idukki_ROW13494136163_1920x1080.jpg) no-repeat center center fixed;
+            background-size: cover;
+            height: 100% !important;
+        }
+        #main_content{
+            background: #ffffff;
+            box-shadow: 0 0 15px #111;
+            min-height: 100%;
+            flex: 1;
+            display: block;
+            font-family: samim;
+        }
+        .rtl-text{
+            direction: rtl;
+        }
+        @font-face {
+            font-family: 'samim';
+            src: url('/static/fonts/Samim.eot');
+            src: url('/static/fonts/Samim.woff') format('woff'), url('/static/fonts/Samim.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <script src="/static/js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".menu_").on("click", function(){
+                var id = $(this).attr("id").split("_")[2];
+                $(".content_").hide();
+                $("#content_"+id).fadeIn(200);
+                $(".menu_.btn-dark").addClass("btn-link");
+                $(".menu_").removeClass("btn-dark");
+                $(this).addClass("btn-dark").removeClass("btn-link");
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="main_content" class="container" style="padding: 0 !important;">
+    <nav style="height: 50px; width:100%; padding: 7px;" class="bg-light  no-gutters border-bottom">
+        <div class="col-6 col-xl-3 pull-right">
+            <h3 class="h3 text-right" style="padding-right: 10px; font-family: samim">
+                <i class="fa fa-first-order pull-right fa"></i> سفارش غذا</h3>
+        </div>
+        <div class="col-6 col-xl-9">
+            <div class="row">
+                <div class="col-xl-3 col-6 pull-left">
+                    <button class="btn btn-danger rtl-text">
+                        <i class="fa fa-power-off"></i> خوش‌آمدی حسین!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-12" style="padding: 35px;">
+            <div class="alert alert-secondary rtl-text text-right" role="alert">
+                <h4 class="alert-heading">همکار گرامی!</h4>
+                <p>
+                    سلام و عرض ادب؛ <br> به سامانه انتخاب غذای شرکت خوش آمدید. <br>توجه داشته باشید که باید حتما تا ۲۴ ساعت قبل از تاریخ مورد نظر، غذای خود را انتخاب کنید وگرنه سامانه اجازه ثبت غذا را به شما نخواهد داد.
+                </p>
+                <hr>
+                <p class="mb-0">
+                    همواره می‌توانید در زمان مقرر غذای خود را تعویض کنید یا انصراف دهید.
+
+                </p>
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <div class="col-1 d-none d-sm-block pull-right">
+                <button class="btn btn-outline-info">
+                    <i class="fa fa-arrow-circle-right fa-2x"></i>
+                </button>
+            </div>
+
+            <div class="col-10 col-md-2 pull-right">
+                <button id="content_selector_1" class="menu_ btn btn-dark">
+                    شنبه ۹۷/۷/۷
+                </button>
+            </div>
+            <div class="col-10 col-md-2 pull-right">
+                <button id="content_selector_2" class="menu_ btn btn-link">
+                    یک‌شنبه ۹۷/۷/۸
+                </button>
+            </div>
+            <div class="col-10 col-md-2  pull-right">
+                <button id="content_selector_3" class="menu_ btn btn-link">
+                    دوشنبه ۹۷/۷/۹
+                </button>
+            </div>
+            <div class="col-10 col-md-2 pull-right">
+                <button id="content_selector_4" class="menu_ btn btn-link">
+                    سه‌شنبه ۹۷/۷/۱۰
+                </button>
+            </div>
+            <div class="col-10 col-md-2 pull-right">
+                <button id="content_selector_5" class="menu_ btn btn-link">
+                    چهارشنبه ۹۷/۷/۱۱
+                </button>
+            </div>
+            <div class="col-1 pull-right">
+                <button class="btn btn-outline-info">
+                    <i class="fa fa-arrow-circle-left fa-2x"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <section class="content_" id="content_1">
+        <div class="row" style="padding:20px !important;">
+            <div class="col-12">
+                <div class="alert alert-info rtl-text text-right">
+                    <h2 class="h2"><i class="fa fa-cutlery"></i> ناهار</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-deck">
+                            <div class="card border-success">
+                                <img class="card-img-top" src="/static/images/5a94edc3c292d.jpg" alt="غذای خوب">
+                                <div class="card-body text-success text-right rtl-text">
+                                    <h5 class="card-title">باقالی‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه به همراه ۲۵۰ گرم باقالی‌پلو
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-success">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">چلوکباب کوبیده</h5>
+                                    <p class="card-text small">
+                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding:20px !important;">
+            <div class="col-12">
+                <div class="alert alert-info rtl-text text-right">
+                    <h2 class="h2"><i class="fa fa-cutlery"></i> شام</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94fd2983178.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">باقالی‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه به همراه ۲۵۰ گرم باقالی‌پلو
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a9509f6e928c.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">چلوکباب کوبیده</h5>
+                                    <p class="card-text small">
+                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a9562ad6de0e.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content_" id="content_2" style="display: none">
+        <div class="row" style="padding:20px !important;">
+            <div class="col-12">
+                <div class="alert alert-info rtl-text text-right">
+                    <h2 class="h2"><i class="fa fa-cutlery"></i> ناهار</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-deck">
+                            <div class="card border-success">
+                                <img class="card-img-top" src="/static/images/5a94edc3c292d.jpg" alt="غذای خوب">
+                                <div class="card-body text-success text-right rtl-text">
+                                    <h5 class="card-title">باقالی‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه به همراه ۲۵۰ گرم باقالی‌پلو
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-success">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94f39fd8dde.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">چلوکباب کوبیده</h5>
+                                    <p class="card-text small">
+                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94f7417d688.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding:20px !important;">
+            <div class="col-12">
+                <div class="alert alert-info rtl-text text-right">
+                    <h2 class="h2"><i class="fa fa-cutlery"></i> شام</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a94fd2983178.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">باقالی‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه به همراه ۲۵۰ گرم باقالی‌پلو
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a9509f6e928c.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">چلوکباب کوبیده</h5>
+                                    <p class="card-text small">
+                                        ۱۵۰ گرم گوشت تازه گوسفندی به همراه برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/images/5a9562ad6de0e.jpg" alt="غذای خوب">
+                                <div class="card-body text-right rtl-text">
+                                    <h5 class="card-title">زرشک‌پلو با مرغ</h5>
+                                    <p class="card-text small">
+                                        گوشت ران مرغ تازه همراه با ۲۵۰ گرم برنج
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button class="btn btn-outline-dark">انتخاب</button>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-center" style="height: 100px">
+        <div class="small text-center text-white rtl-text" style="padding-top: 25px;">
+            تمامی حقوق محفوظ است. <br>
+            ۱۳۹۷ - ۲۰۱۸
+        </div>
+    </footer>
+</div>
+</body>
+</html>

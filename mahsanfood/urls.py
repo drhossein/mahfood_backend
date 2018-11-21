@@ -20,6 +20,7 @@ from main import views
 from mahsanfood import settings
 
 urlpatterns = [
+    path('', views.index),
     path('admin/', admin.site.urls),
-    path('login/', views.login)
+    path('login/', views.login_)
 ] + static(settings.STATIC_URL, document_root=settings.SITE_ROOT)

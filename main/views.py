@@ -1,11 +1,11 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
 
 
-def login(request):
+def login_(request):
     """
     our custom login page.
     :param request:
@@ -18,16 +18,21 @@ def login(request):
         password = request.POST.get("password")
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            return HttpResponseRedirect("/")
+            if user.is_active:
+                login(request, user)
+                return HttpResponseRedirect("/")
+            else:
+                error = True
         error = True
     return render(request, "login_form.html",{
         "error": error
     })
 
 
-def logout(request):
-    pass
+def logout_(request):
+    logout(request)
+    return HttpResponseRedirect("/")
 
 
 def index(request):
-    pass
+    return render(request, 'order.html')
